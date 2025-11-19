@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Baseball Teams – D3 Visualizations</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 20px;
+      background: #f7f7f7;
+    }
+
+    h1 {
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      max-width: 800px;
+      font-size: 0.95rem;
+    }
+
+    .chart-container {
+      margin-top: 30px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      padding: 16px 20px 24px;
+    }
+
+    .chart-title {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    svg {
+      width: 100%;
+      height: 420px;
+    }
+
+    .axis-label {
+      font-size: 12px;
+      fill: #444;
+    }
+
+    .tooltip {
+      position: absolute;
+      padding: 6px 8px;
+      background: white;
+      border: 1px solid #999;
+      border-radius: 4px;
+      font-size: 12px;
+      pointer-events: none;
+      opacity: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+  <h1>MLB Teams – D3 Visualizations</h1>
+  <p>
+    These charts use the <code>Teams.csv</code> dataset. The scatter plot shows the
+    relationship between runs per game and total wins for each team season
+    (1960 and later). The line chart shows the league-average runs per game by year.
+    Hover over any dot to see details.
+  </p>
+
+  <div class="chart-container">
+    <div class="chart-title">Scatter Plot: Runs per Game vs Wins (Team Seasons)</div>
+    <svg id="scatterplot"></svg>
+  </div>
+
+  <div class="chart-container">
+    <div class="chart-title">Line Chart: League-Average Runs per Game by Year</div>
+    <svg id="linechart"></svg>
+  </div>
+
+  <div class="tooltip" id="tooltip"></div>
+
+  <!-- D3 and main script -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
