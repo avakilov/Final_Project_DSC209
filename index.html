@@ -65,10 +65,24 @@
   </p>
 
   <div class="chart-container">
+    <label>Scatter Plot Year Range:
+      <input type="range" id="scatterYearMin" min="1960" max="2020" value="1960">
+      <input type="range" id="scatterYearMax" min="1960" max="2020" value="2020">
+      <span id="scatterYearLabel"></span>
+    </label>
+
+  <div class="chart-container">
     <div class="chart-title">Scatter Plot: Runs per Game vs Wins (Team Seasons)</div>
     <svg id="scatterplot"></svg>
   </div>
 
+  <div class="chart-container">
+    <label>Line Chart Year Range:
+      <input type="range" id="lineYearMin" min="1960" max="2020" value="1960">
+      <input type="range" id="lineYearMax" min="1960" max="2020" value="2020">
+      <span id="lineYearLabel"></span>
+    </label>
+    
   <div class="chart-container">
     <div class="chart-title">Line Chart: League-Average Runs per Game by Year</div>
     <svg id="linechart"></svg>
